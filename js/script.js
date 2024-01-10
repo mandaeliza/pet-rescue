@@ -39,3 +39,12 @@ const francine = createPet("Francine", "turtle");
 // baxter.play();
 
 // console.log(clover, baxter);
+
+//Update properties
+clover.isTired = 8;
+francine.isTired = 9;
+
+//create array that includes all pets
+const allPets = [sora, clover, baxter, cleo, francine];
+console.log(allPets);
+
