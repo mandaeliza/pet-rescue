@@ -46,17 +46,29 @@ francine.isTired = 9;
 
 //create array that includes all pets
 const allPets = [sora, clover, baxter, cleo, francine];
-console.log(allPets);
+// console.log(allPets);
 
-const showPets = function () {
+//Display pets in browers
+const showPets = function (petArray) {
+    //empty list
   pets.innerText = "";
-  for (let status of petArray) {
-    let status = "ready to play"
-    if (this.isTired >= 7) {
-        this.status = "sleeping"
+
+  for (let pet of petArray) {
+    let status = "ready to play!"
+    if (pet.isTired >= 7) {
+        status = "sleeping."
     }
-    const li = document.createElement("li");
-    li.innerHTML = `<span class="pet-name">${this.name}</span> the ${this.species} is ${this.status}!`;
+    let li = document.createElement("li");
+    li.innerHTML = `<span class="pet-name">${pet.name}</span> the ${pet.species} is ${status}`;
     pets.append(li);
   }
-}
+};
+
+//add click event
+
+statusButton.addEventListener(
+    "click", 
+    function() {
+        showPets(allPets);
+    }
+    );
