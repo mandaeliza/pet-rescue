@@ -48,3 +48,15 @@ francine.isTired = 9;
 const allPets = [sora, clover, baxter, cleo, francine];
 console.log(allPets);
 
+const showPets = function () {
+  pets.innerText = "";
+  for (let status of petArray) {
+    let status = "ready to play"
+    if (this.isTired >= 7) {
+        this.status = "sleeping"
+    }
+    const li = document.createElement("li");
+    li.innerHTML = `<span class="pet-name">${this.name}</span> the ${this.species} is ${this.status}!`;
+    pets.append(li);
+  }
+}
